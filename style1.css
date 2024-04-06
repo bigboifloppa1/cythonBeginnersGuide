@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+body {
+  background: #464646;
+  max-height: 200vh;
+  font-family: "comic neue";
+}
+
+
+.title {
+  font-size: 20px;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 0;
+  background: #E3E3E7;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 250px;
+  height: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.title h3 {
+  color: #000;
+}
+
+.underline {
+  background: black;
+  height: 2px;
+  width: 100vw;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.cython-img {
+  position: absolute;
+  width: 75px;
+  bottom: 3px;
+  margin-left: 150px;
+}
+
+.title h4 {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  font-size: 5px;
+  color: #72737B;
+  left: 3px;
+  bottom: 3px;
+}
+
+.design {
+  position: absolute;
+  background: linear-gradient(to right, #E3E3E7, #797979);
+  height: 40px;
+  width: 80vw;
+  bottom: 2px;
+  left: 20vw;
+}
+
+@media screen and (min-width: 500px) {
+  .title h3 {
+    font-size: 1em;
+  }
+}
+
+main {
+  position: relative;
+  background: #262626;
+  height: 260vh;
+  max-height: 310vh;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: -1;
+  top: 50px;
+  text-align: center;
+}
+
+main h3 {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 3px solid white;
+  width: 275px;
+}
+
+main p {
+  position: relative;
+  text-align: left;
+  left: 2.5px;
+}
+
+.code {
+  background: #393939;
+  height: 105px;
+  max-height: 100%;
+  width: 90%;
+  transform: translateX(5%);
+  font-family: "source code pro";
+  text-align: left;
+  border-radius: 5px;
+}
+
+.a {
+  height: 30px;
+}
+
+.b {
+  height: 40px;
+}
+
+.c {
+  height: 145px;
+}
+
+.d {
+  height: 30px;
+}
+
+.e {
+  height: 70px;
+}
+
+.comment {
+  color: limegreen;
+}
+
+.import {
+  color: darkorange;
+}
+
+.num {
+  color: #ECBE43;
+}
+
+.print {
+  color: #5EBEFF;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 90vw;
+    height: 305vh;
+  }
+}

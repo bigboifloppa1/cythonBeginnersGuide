@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style1.css">
+  <title>Cython stuff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    <div class="underline">
+      <div class="design"></div>
+      <span class="title">
+        <h3>Cython Guide</h3>
+        <img class="cython-img" src="/cython-logo.png">
+        <h4>This is not the official Cython website</h4>
+      </span>
+    </div>
+  </header>
+  <main>
+    <h3>A beginner's guide to Cython</h3></br>
+    <p>
+      In order to use Cython, you must first install Cython (obviously). </br>In your command prompt, type in </br></br><p class="code a">pip install cython</p>
+    </p>
+    <p></br>
+      Ok now, we can start coding straight away after the installation is done!
+      Just follow my steps.</br></br>
+      <p class="code"><span class="comment">#main.pyx</span><br><span class="import">import</span> cython</br></br>x = <span class="num">20</span> + <span class="num">20</span><span class="print"></br>print(x)</span></p>
+    </p>
+    <p></br>
+      Highly recommend you to copy it manually as it will give you more experience as a programmer!
+    </p>
+    <p>
+      </br>
+      By the way, note that I did not use the Cython functions yet? That is because I am going to show you some comparison between pure Python vs Cython
+      </br></br>Now, we will see! :)
+    </p>
+    <p>
+      </br>
+      So now lets run this python file and.. </br></br>
+      <p class="code b">40 </br>
+      0.0388033069903031s</p>
+    </p>
+    <p></br>
+    Oh yeah I forgot I also imported <span class="code">time</span> sorry about that.
+    But that doesn't really matter now does it?
+    </p>
+    <p>
+      </br>
+      Ok now, we need to create setup.py file. Don't worry if you're not familiar with it, probably just try to copy & paste it or type it manually</br></br>
+    </p>
+    <p class="code c"><span class="import">from</span> setuptools <span class="import">import</span> setup</br><span class="import">from</span> Cython.Build <span class="import">import</span> cythonize</br></br>setup(</br>&nbsp ext_modules = cythonize("main.pyx")</br>)</p>
+    <p></br>
+      Ok, now this command line should be simple</br>
+      <p class="code d">python setup.py build_ext --inplace</p>
+    </p>
+    <p></br>
+      It should say something like <span class="code">Compiling main.pyx</span> or something.
+    </p>
+    <p>
+      Ok now we're ready to run the code! We have 2 options, </br></br>
+      1. Directly from the Python's shell </br>
+      2. In another python file
+    </p>
+    <p></br>Well! Why not try 'em both?</p></br>
+    <p class="code"><span class="comment">#Directly from the Python's shell</span></br>$ python</br>>>> import main</br>40</br>0.00015507699572481215</p>
+    <p>
+      </br>
+      That's a whopping 200-300x faster!
+    </p>
+    <p></br>
+      Ok, now we will try it in another Python file </br>
+      <p class="code e"><span class="comment">#test.py</span></br><span class="import">import</span> main</br><span class="print">print</span>(main)</p>
+    </p></br>
+    <p>Well, you already know the output!</p></br>
+    <p>So in summary, Cython is basically just Python but faster (fast as fu-). It's a bit hard to configure but, definitely worth it for the 300x boost!</p>
+  </main>
+</body>
+</html>
