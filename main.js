@@ -1,7 +1,8 @@
 content = document.querySelector(".content");
 button = document.querySelector(".readmore");
 cython = document.querySelector(".cython");
-block = document.querySelector(".block")
+block = document.querySelector(".block");
+getstarted = document.querySelector(".getstarted")
 
 readmore = () => {
   setTimeout(function() {
@@ -18,7 +19,8 @@ readmore = () => {
   },1730)
 }
 
-getstarted = () => {
+//getstarted = () => {
+getstarted.addEventListener("click", () => {
   block.style.animation = "popup 300ms ease 1";
   setTimeout(() => {
     block.style.width = "100vw"
@@ -34,4 +36,4 @@ getstarted = () => {
     block.style.removeProperty("animation");
     window.location.href = "/cythonTut.html"
   }, 500)
-}
+});
