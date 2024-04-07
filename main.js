@@ -34,6 +34,6 @@ getstarted.addEventListener("click", () => {
   }, 300)
   setTimeout(function() {
     block.style.removeProperty("animation");
-    window.location.href = "/cythonTut.html"
+    window.location.href = "cythonTut.html"
   }, 500)
 });
