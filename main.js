@@ -31,6 +31,9 @@ getstarted.addEventListener("click", () => {
     block.style.display = "inline"
     block.style.background = "#464646"
     block.style.content = "lol"
+    setTimeout(() => {
+      block.style.display = "none"
+    })
   }, 300)
   setTimeout(function() {
     block.style.removeProperty("animation");
